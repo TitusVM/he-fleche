@@ -1,0 +1,19 @@
+﻿<Window x:Class="HE_Fleche.NewModule"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HE_Fleche"
+        mc:Ignorable="d"
+        Title="NewModule" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="txtBoxModuleName" HorizontalAlignment="Left" Height="27" Margin="55,101,0,0" Text="Nom du module" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" GotFocus="txtBox_GotFocus"/>
+        <Button x:Name="btnNewModule" Content="Nouveau module" HorizontalAlignment="Left" Height="33" Margin="55,147,0,0" VerticalAlignment="Top" Width="155"/>
+        <TextBox x:Name="txtBoxSubjectName" HorizontalAlignment="Left" Height="27" Margin="519,101,0,0" Text="Nom de la matière" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Visibility="Visible" GotFocus="txtBox_GotFocus"/>
+        <Button x:Name="btnNewSubject" Content="Ajouter une matière" HorizontalAlignment="Left" Height="33" Margin="519,281,0,0" VerticalAlignment="Top" Width="155"/>
+        <TextBox x:Name="txtBoxCoef" HorizontalAlignment="Left" Height="27" Margin="519,147,0,0" Text="Coefficient de la matière" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" GotFocus="txtBox_GotFocus"/>
+        <CheckBox x:Name="cBoxExamen" Content="Examen" HorizontalAlignment="Left" Margin="519,202,0,0" VerticalAlignment="Top" Height="15" Width="90"/>
+        <GridSplitter HorizontalAlignment="Left" Height="424" Margin="392,0,0,0" VerticalAlignment="Top" Width="8"/>
+        <ComboBox HorizontalAlignment="Left" Height="25" Margin="519,240,0,0" VerticalAlignment="Top" Width="155"/>
+    </Grid>
+</Window>
