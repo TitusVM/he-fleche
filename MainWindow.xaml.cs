@@ -29,6 +29,7 @@ namespace HeFleche
             moduleList = Model.FetchModules(cnn);
             listModule.ItemsSource = moduleList;
             cbxModules.ItemsSource = moduleList;
+
             if(lastMatiere != null)
             {
                 listNote.ItemsSource = Model.FetchNotes(cnn, lastMatiere);
@@ -43,6 +44,7 @@ namespace HeFleche
             {
                 listMatiere.ItemsSource = selectedModule.Matieres;
                 cbxMatiere.ItemsSource = selectedModule.Matieres;
+                cbxModules.SelectedItem = selectedModule;
                 nomModule.Text = selectedModule.Name;
             }
         }
@@ -57,6 +59,7 @@ namespace HeFleche
                 coeffMat.Text = selectedMatiere.Coefficient.ToString();
                 nomMatiere.Text = selectedMatiere.Name;
                 coeffMatiere.Text = selectedMatiere.Coefficient.ToString();
+                cbxMatiere.SelectedItem = selectedMatiere;
             }
         }
 
