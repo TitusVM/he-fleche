@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.32413.511
+VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HE-Fleche", "HE-Fleche.csproj", "{42B35CCF-8922-46BE-AA31-B6E7F2B29023}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeFleche", "HeFleche.csproj", "{12DA9A69-B081-46E5-AA4F-275B8E28FF07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{42B35CCF-8922-46BE-AA31-B6E7F2B29023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42B35CCF-8922-46BE-AA31-B6E7F2B29023}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42B35CCF-8922-46BE-AA31-B6E7F2B29023}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42B35CCF-8922-46BE-AA31-B6E7F2B29023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12DA9A69-B081-46E5-AA4F-275B8E28FF07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12DA9A69-B081-46E5-AA4F-275B8E28FF07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12DA9A69-B081-46E5-AA4F-275B8E28FF07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12DA9A69-B081-46E5-AA4F-275B8E28FF07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {61CE4142-DAAC-4C20-8E99-A93FEBFC21BE}
+		SolutionGuid = {91D262FC-A9DD-4500-A0F7-BD3ADEEFB3CF}
 	EndGlobalSection
 EndGlobal

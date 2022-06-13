@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace HE_Fleche
+namespace HeFleche
 {
     /// <summary>
     /// Interaction logic for App.xaml
