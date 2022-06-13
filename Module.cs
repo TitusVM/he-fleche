@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
 using System.ComponentModel;
-using System.Data.SqlClient;
+using System.Linq;
 
 namespace HeFleche
 {
-    class Module : INotifyPropertyChanged 
+    class Module : INotifyPropertyChanged
     {
         /*********************************************************\
          *                 Private Attributes                    *
@@ -60,7 +58,9 @@ namespace HeFleche
         public Collection<Matiere> Matieres
         {
             get { return matieres; }
-            set { matieres = value; UpdateMoyenne(); NotifyPropertyChanged("Matieres");
+            set
+            {
+                matieres = value; UpdateMoyenne(); NotifyPropertyChanged("Matieres");
                 UpdateMoyenne();
             }
         }
@@ -84,7 +84,7 @@ namespace HeFleche
         {
             this.moyenne = 0.0;
             double coeffTotal = 0;
-            if(this.matieres.Count() != 0)
+            if (this.matieres.Count() != 0)
             {
                 foreach (Matiere matiere in this.matieres)
                 {

@@ -169,6 +169,8 @@ namespace HeFleche
                 Model.CreateMatiere((SqlConnection)cnn, new Matiere()
                 {
                     Name = nomMatiere.Text,
+                    Coefficient = Int32.Parse(coeffMatiere.Text),
+                    IdModule = ((Module)cbxModules.SelectedItem).Id,
                 });
                 UpdateLists(null);
             }

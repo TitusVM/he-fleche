@@ -31,7 +31,7 @@ namespace HeFleche
         }
         public static void CreateMatiere(SqlConnection cnn, Matiere matiere)
         {
-            string createQuery = "INSERT INTO Matiere(nameSubject,coefficient,moduleId) " +
+            string createQuery = "INSERT INTO Subjects (nameSubject,coefficient,moduleId) " +
                 "VALUES ('" + matiere.Name +
                 "', " + matiere.Coefficient +
                 ", " + matiere.IdModule + ")";
@@ -177,8 +177,8 @@ namespace HeFleche
         public static void UpdateModule(SqlConnection cnn, Module module)
         {
             string updateQuery = "UPDATE Modules " +
-                "SET nameModule=" + module.Name +
-                " WHERE id=" + module.Id;
+                "SET nameModule='" + module.Name +
+                "' WHERE id=" + module.Id;
             try
             {
                 new SqlCommand(updateQuery, cnn).ExecuteNonQuery();
@@ -209,6 +209,10 @@ namespace HeFleche
         }
         public static void DeleteMatiere(SqlConnection cnn, Matiere matiere)
         {
+            foreach (Note note in matiere.Notes)
+            {
+                DeleteNote(cnn, note);
+            }
             string deleteQuery = "DELETE FROM Subjects " +
                 "WHERE id=" + matiere.Id;
             try
@@ -219,13 +223,13 @@ namespace HeFleche
             {
                 MessageBox.Show("There was a problem " + e);
             }
-            foreach(Note note in matiere.Notes)
-            {
-                DeleteNote(cnn, note);
-            }
         }
         public static void DeleteModule(SqlConnection cnn, Module module)
         {
+            foreach (Matiere matieres in module.Matieres)
+            {
+                DeleteMatiere(cnn, matieres);
+            }
             string deleteQuery = "DELETE FROM Modules " +
                 "WHERE id=" + module.Id;
             try
@@ -235,10 +239,6 @@ namespace HeFleche
             catch (Exception e)
             {
                 MessageBox.Show("There was a problem " + e);
-            }
-            foreach (Matiere matieres in module.Matieres)
-            {
-                DeleteMatiere(cnn, matieres);
             }
         }
         #endregion
